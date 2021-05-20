@@ -19,3 +19,6 @@ var isSunk = false;
 - Display stats to the user
 */
 
+while( isSunk == false){
+    guess = prompt("Ready, aim, fire! (enter a number 0-6) :");
+}
