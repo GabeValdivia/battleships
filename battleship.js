@@ -11,3 +11,11 @@ var guesses = 0;
 //Determine if ship is sunk
 var isSunk = false;
 
+//TO DO
+/*
+- Create a loop to get user guess
+- Check user guess
+- Check if ship has been sunk
+- Display stats to the user
+*/
+
