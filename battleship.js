@@ -19,6 +19,13 @@ var isSunk = false;
 - Display stats to the user
 */
 
+//Create loop to get user guess
 while( isSunk == false){
     guess = prompt("Ready, aim, fire! (enter a number 0-6) :");
+    //Check user guess
+    if (guess < 0 || guess > 6 ){
+        alert("Please enter a valid cell number!");
+    } else {
+        guesses = guesses + 1;
+    }
 }
