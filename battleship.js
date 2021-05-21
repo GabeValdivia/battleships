@@ -23,13 +23,25 @@ var isSunk = false;
 while( isSunk == false){
     guess = prompt("Ready, aim, fire! (enter a number 0-6) :");
     //Check user guess
-    if (guess < 0 || guess > 6 ){
+    if ( guess < 0 || guess > 6 ){
         alert("Please enter a valid cell number!");
     } else {
         guesses = guesses + 1;
-    }
-    //Check to see if you ship has been sunk
-    if ( guess == location1 || guess == location2 || guess == location3 ){
-        hits = hits + 1;
+        //Check to see if locations are hit && increment hits variable if true
+        if (guess == location1 || guess == location2 || guess == location3) {
+            alert("HIT!");
+            hits = hits + 1;
+            //Check to see if you ship has been sunk
+            if (hits == 3) {
+                isSunk = true;
+                alert("You sank my battleship!");
+            } 
+        } else {
+            alert("MISS");
+        }
     }
 }
+   
+//Disply stats to the user
+var stats = `You took ${guesses} guesses to sink the battleship, which means your shooting accuracy was 3/${guesses}`;
+alert(stats);
